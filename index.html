@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Snake 代码编辑器</title>
+	<title>Snake-test 代码编辑器</title>
 	<style>
 		body {
 			margin: 0;
@@ -499,6 +499,7 @@
 			<button id="run-btn">运行 (JS)</button>
 			<button id="preview-btn">预览</button>
 			<button id="save-btn">保存</button>
+			<button id="home-btn">主页</button>
 		</div>
 	</div>
 
@@ -517,6 +518,10 @@
 	<button class="view-toggle" id="view-toggle">👁️</button>
 
 	<script>
+		// 主页按钮点击事件
+		document.getElementById('home-btn').addEventListener('click', function() {
+			window.open('https://zhangyimin12345.github.io/snake-test/', '_blank');
+		});
 		// 加载 Monaco Editor 脚本
 		const loadMonacoScript = () => {
 			return new Promise((resolve) => {
@@ -555,7 +560,7 @@
 				'sql': '-- SQL 代码示例\nSELECT * FROM users WHERE age > 18 ORDER BY name ASC;',
 				'json': '{\n  "name": "John Doe",\n  "age": 30,\n  "isActive": true,\n  "address": {\n    "street": "123 Main St",\n    "city": "New York"\n  },\n  "hobbies": ["reading", "hiking"]\n}',
 				'xml': '<!-- XML 代码示例 -->\n<person>\n  <name>John Doe</name>\n  <age>30</age>\n  <address>\n    <street>123 Main St</street>\n    <city>New York</city>\n  </address>\n</person>',
-				'markdown': '# Markdown 示例\n\n这是一个 **Markdown** 文档示例。\n\n## 数学公式\n\n行内公式: $E = mc^2$\n\n块级公式:\n\n$$\n\\int_a^b f(x) dx = F(b) - F(a)\n$$\n\n或者:\n\n```math\n\\sum_{i=1}^n i = \\frac{n(n+1)}{2}\n```\n\n## 代码示例\n\n```javascript\n// JavaScript 代码块\nfunction hello() {\n  console.log("Hello World!");\n}\n```\n\n## 其他元素\n\n- 列表项 1\n- 列表项 2\n\n[链接](https://example.com)\n\n> 引用内容示例\n\n| 表格示例 | 第二列 |\n|----------|--------|\n| 行1      | 数据1  |\n| 行2      | 数据2  |'
+				'markdown': '# Welcome!\n\n这是一个 Markdown 代码示例'
 			};
 
 			// 创建编辑器
